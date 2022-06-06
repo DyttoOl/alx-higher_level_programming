@@ -3,20 +3,47 @@
 #include "lists.h"
 
 /**
- * is_palindrome- checks if a number is a palindrome
- * Return: Either 1 if number is a palindrome or 0 if not
+ * check_recursively - Recursively moves the pointers to check if palindrome
+ * @start: Will move from the start of the list
+ * @end: Will move from the end of the list
+ *
+ * Return: Either 0 or 1 depending if is a palindrome
  */
-int is_palindrome(listint_t **head);
+int check_recursively(listint_t **start, listint_t *end)
 {
-	int remain, num, sum = 0;
+	int check;
 
-	for (num = n; n 1= 0; n = n/10)
-	{
-		remain = n % 10;
-		sum = sum * 10 + remain;
-	}
-	if (num == sum)
+	if (end == NULL)
 		return (1);
-	else
+
+	check = check_recursively(start, end->next);
+
+	if (check == 0)
 		return (0);
+
+	if ((*start)->n == end->n)
+		check = 1;
+	else
+		check = 0;
+
+	*start = (*start)->next;
+
+	return (check);
+}
+
+/**
+ * is_palindrome - Checks if a singly linked list is a palindrome
+ * @head: The start of the linked list
+ *
+ * Return: 1 if is palindrome, 0 if it is not
+ */
+int is_palindrome(listint_t **head)
+{
+	listint_t **start = head;
+	listint_t *end = *head;
+
+	if (*head == NULL)
+		return (1);
+
+	return (check_recursively(start, end));
 }
