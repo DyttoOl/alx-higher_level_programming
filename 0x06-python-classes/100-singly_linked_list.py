@@ -6,10 +6,8 @@ class Node:
     """Defines a node of a singly linked list"""
     def __init__(self, data, next_node=None):
         """Interior data of node
-        
         Args:
             data (int): content of node
-            
         Returns: None
         """
         self.data = data
@@ -18,10 +16,8 @@ class Node:
     @property
     def data(self):
         """Taking the data
-        
         Args:
             data (int): node content
-            
         Returns: data
         """
         return self.__data
@@ -29,7 +25,6 @@ class Node:
     @data.setter
     def data(self, value):
         """ Handle data errors
-        
         Args:
             data (int): node content
         """
