@@ -3,17 +3,17 @@
 
 
 class Square:
-    """Defining a square class"""
+    """Defining a square class
 
     Attributes:
-        __size (int): Defines the size of a square
+        __size (int): size of a square
 
     """
     def __init__(self, size):
         """Making size private
 
         Args:
-            size (int): Defines the size of a square
+            size (int): size of a square
 
         Returns: None
         """
