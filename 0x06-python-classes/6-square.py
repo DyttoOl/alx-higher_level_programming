@@ -4,15 +4,18 @@
 
 class Square:
     """Represents a square
+    
     Attributes:
         __size (int): size of a size of the square
         __position (tuple): position of the square in 2D space
     """
     def __init__(self, size=0, position=(0, 0)):
         """initializes the square
-        Args:
+       
+       Args:
             size (int): size of a side of the square
             position (tuple): positoin of the square in 2D space
+        
         Returns:
             None
         """
@@ -21,6 +24,7 @@ class Square:
 
     def area(self):
         """calculates the square's area
+        
         Returns:
             The area of the square
         """
@@ -29,6 +33,7 @@ class Square:
     @property
     def size(self):
         """getter of __size
+        
         Returns:
             The size of the square
         """
@@ -37,8 +42,10 @@ class Square:
     @size.setter
     def size(self, value):
         """setter of __size
-        Args:
+       
+       Args:
             value (int): size of a side of the square
+        
         Returns:
             None
         """
@@ -52,8 +59,9 @@ class Square:
 
     def my_print(self):
         """prints the square
-        Returns:
-            None
+        
+        Returns:        
+        None
         """
         if self.__size == 0:
             print()
@@ -67,6 +75,7 @@ class Square:
     @property
     def position(self):
         """getter of __position
+        
         Returns:
             The position of the square in 2D space
         """
@@ -75,9 +84,11 @@ class Square:
     @position.setter
     def position(self, value):
         """setter of __position
+        
         Args:
             value (tuple): position of the square in 2D space
-        Returns:
+       
+       Returns:
             None
         """
         if type(value) is not tuple or len(value) != 2 or \
