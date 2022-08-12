@@ -1,0 +1,1 @@
+-- creates second table of a DB
